@@ -2,6 +2,7 @@ package com.oci.backend.employeeservice.services;
 
 import com.oci.backend.employeeservice.awsservices.BasicAuthNBucketService;
 import com.oci.backend.employeeservice.awsservices.BucketFileDownload;
+import com.oci.backend.employeeservice.awsservices.Ec2InstanceBuketService;
 import com.oci.backend.employeeservice.configurations.S3BucketConfig;
 import com.oci.backend.employeeservice.models.User;
 import com.oci.backend.employeeservice.repositories.UserRepository;
@@ -18,7 +19,7 @@ import java.util.*;
 public class UserService {
 
     @Autowired
-    private BucketFileDownload<Set<User>> bucketService;
+    private Ec2InstanceBuketService bucketService;
     @Autowired
     private S3BucketConfig s3BucketConfig;
 
